@@ -17,6 +17,7 @@
       <li class="<?php if ($_SESSION['m2']=='clientes-list') { echo "active"; } else { echo "" ;}?>" ><a href="clientes-list.php">Clientes</a></li>
       <li class="<?php if ($_SESSION['m2']=='empresa-list') { echo "active"; } else { echo "" ;}?>" ><a href="empresa-list.php">Empresa</a></li>
       <li class="<?php if ($_SESSION['m2']=='venta-productos-list') { echo "active"; } else { echo "" ;}?>" ><a href="venta-productos-list.php">Venta de Productos</a></li>
+      <li class="<?php if ($_SESSION['m2']=='productos-list') { echo "active"; } else { echo "" ;}?>" ><a href="productos-list.php">Productos</a></li>
       <li class="<?php if ($_SESSION['m2']=='contacto-list') { echo "active"; } else { echo "" ;}?>" ><a href="contacto-list.php">Contacto</a></li>
       <li class="<?php if ($_SESSION['m2']=='portada-list') { echo "active"; } else { echo "" ;}?>" ><a href="portada-list.php">Portada</a></li>
       <?php } ?>

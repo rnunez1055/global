@@ -90,41 +90,32 @@
 								<li>Tintes penetrantes marca MAGNAFLUX</li>
 								<li>Partículas magnéticas fluorescentes MAGNAFLUX</li>
 								<li>Partículas magnéticas visibles MAGNAVIS<br> en la marca MAGNAFLUX</li>
-								
 							</ul>-->
 						</div>
 					</div>
 				</div>
 			</div>
 			<br>
-			<div class="row row_margin">
-                <?php if ($imgs = $objProd ->gImages(LBN_ADMIN_STATUS_ON)): ?>                 	
-                    <?php while ($i = $imgs ->rNext()){?>
-                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
-                            <div class="g_img">
-                                <a href="upload/<?= $i ->target?>" class="html5lightbox" title="<?= $i ->title;?>">
-                                	<img src="upload/<?= $i ->target;?>" alt="<?= $i->title;?>"/>
-                                </a>
-                            </div>
-                        </div>
-                     <?php }?>
-                  <?php endif?>
-                
-				<!--<div class="col-xs-12 col-sm-4">
-					<div class="g_img">
-						<a href="contenido/img/certificacion_elementos/contenido/certificacion_contenido2.jpg" class="html5lightbox"><img src="contenido/img/certificacion_elementos/contenido/certificacion_contenido2.jpg"></a>
-					</div>
-				</div>
-				<div class="col-xs-12 col-sm-4">
-					<div class="g_img">
-						<a href="contenido/img/certificacion_elementos/contenido/certificacion_contenido3.jpg" class="html5lightbox"><img src="contenido/img/certificacion_elementos/contenido/certificacion_contenido3.jpg"></a>
-					</div>
-				</div>
-				<div class="col-xs-12 col-sm-4">
-					<div class="g_img">
-						<a href="contenido/img/certificacion_elementos/contenido/certificacion_contenido4.jpg" class="html5lightbox"><img src="contenido/img/certificacion_elementos/contenido/certificacion_contenido4.jpg"></a>
-					</div>
-				</div>-->
+            <div class="row row_margin">
+                <?php				
+                    $objNot=new Page();
+                    $objNot->loadItems ("#orderId ASC","category.categoryId=".ID_SUBCAT_PRODUCTOS." AND #status='Activo'");
+                    if ($objNot->loadList()){
+                        while ($kk = $objNot->rNext()){
+                         
+                            if ($img = $kk ->gObjImage(LBN_ADMIN_STATUS_ON)){
+                            
+                print '<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">';
+					print '<div class="g_img2">';
+						print '<a href="'.$kk ->url_fuente.'" title="'.$kk ->title.'" target="_blank">';
+                            print '<img src="upload/'.$img ->target.'" alt="'.$kk ->title.'"/>';                                
+                        print '</a>';
+					print '</div>';
+				print '</div>';
+                            }
+                        }
+                    }
+               ?>
 			</div>
 		</div>
 	</div>
