@@ -1542,9 +1542,9 @@ ul {
     border-right: none;
 }
 
-.iconos-fijos:hover {
+/* .iconos-fijos:hover {
     transform: translateX(0%);
-}
+} */
 
 .iconos-fijos__wrap {
     display: flex;
