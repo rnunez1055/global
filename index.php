@@ -571,11 +571,11 @@ if (!$objProdPortada->loadByKey($objProdPortada->getIdKey(), intval($page_id_por
 		</a>
 	</div>
 	<div class="iconos-fijos-2">
-		<a class="iconos-fijos__wrap" href="http://globalsuppliersp.com/brochure_izaje/brochure.pdf" title="Descargar Brochure Digital" target="_blank">
+		<a class="iconos-fijos__wrap" href="http://globalsuppliersp.com/brochure_izaje/brochure.pdf" target="_blank">
 			<figure class="iconos-fijos__icon">
 				<img src="contenido/img/pdf.svg" alt="">
 			</figure>
-			<p class="iconos-fijos__text">DESCARGAR BROCHURE DIGITAL</p>
+			<p class="iconos-fijos__text">DESCARGAR BROCHURE</p>
 		</a>
 	</div>
 	
