@@ -561,7 +561,7 @@
 		</div>
 	</div>
 	<?php include("_footer.php") ?>
-	<!-- iconos -->
+	
 	<div class="iconos-fijos">
 		<a class="iconos-fijos__wrap" href="buscador_certificados.php">
 			<figure class="iconos-fijos__icon">
@@ -577,7 +577,7 @@
 			</figure>
 		</a>
 	</div>
-	<!-- redes -->
+	
 	<div class="redes-fijas">
 
         <?php if (SITE_FACEBOOK) { ?>
