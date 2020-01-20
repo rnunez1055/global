@@ -1,11 +1,11 @@
 	<footer class="border_top">
 		<div id="f_b1">
 			<div class="container">
-				<div class="w_text icon_green">
-					<p>COMO CONTACTARNOS</p>
-				</div>
 				<div class="sedes">
 					<div class="sedes__item">
+						<div class="w_text icon_green">
+							<p>OFICINA TRUJILLO</p>
+						</div>
 						<?php if (SITE_DIRECCION) { ?>
 							<div class="sedes__item__wrap">
 								<div class="w_contact">
@@ -22,6 +22,9 @@
 						<?php } ?>
 					</div>
 					<div class="sedes__item">
+						<div class="w_text icon_green">
+							<p>OFICINA CAJAMARCA</p>
+						</div>
 						<?php if (SITE_DIRECCION_CAX) { ?>
 							<div class="sedes__item__wrap">
 								<div class="w_contact">
@@ -55,7 +58,7 @@
 						<?php } ?>
 					</div>
 				</div>
-<!-- 
+				<!-- 
 				<div class="row">
 					<?php if (SITE_DIRECCION) { ?>
 						<div class="col-xs-12 col-sm-6">
