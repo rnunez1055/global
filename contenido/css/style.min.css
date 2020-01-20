@@ -1822,8 +1822,9 @@ ul {
     .iconos-fijos {
         transform: translateX(16.5rem);
     }
+
     .iconos-fijos-2 {
-        transform: translateX(23.52rem);
+        transform: translateX(10rem);
     }
 }
 
