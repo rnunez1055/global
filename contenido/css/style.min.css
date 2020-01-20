@@ -1801,28 +1801,43 @@ ul {
     color: #fff;
     transition: all .8s;
 }
-.sedes{
+
+.sedes {
     display: grid;
-    grid-template-columns: auto repeat(2,1fr);
+    grid-template-columns: auto repeat(2, 1fr);
 }
-.sedes__item__wrap{
+
+.sedes__item__wrap {
     margin-top: 1rem;
 }
-@media screen and (max-width:991px){
-    .sedes{
-        grid-template-columns: repeat(1,1fr);
+
+@media screen and (max-width:991px) {
+    .sedes {
+        grid-template-columns: repeat(1, 1fr);
         gap: 2rem;
     }
 }
+
 @media screen and (max-width:800px) {
-  .iconos-fijos{
-      transform: translateX(16.5rem);
-  }
+    .iconos-fijos {
+        transform: translateX(16.5rem);
+    }
+    .iconos-fijos-2 {
+        transform: translateX(23.52rem);
+    }
 }
-.slider_t .slick-next{
+
+.slider_t .slick-next {
     z-index: 10;
 }
+
 .iconos-fijos__wrap:active,
-.iconos-fijos__wrap:hover{
+.iconos-fijos__wrap:hover {
     color: #fff;
+}
+
+.table>thead:first-child>tr:first-child>th {
+    white-space: nowrap;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
 }
