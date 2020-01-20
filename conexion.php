@@ -2,7 +2,7 @@
     $usuario = "root";
     $password = "";
     $servidor = "localhost";
-    $basededatos = "gestion_izaje";
+    $basededatos = "db_gestion_izaje";
 
     /*$usuario = "globalsu_usuizaj";
     $password = "IRs{xgk+MKQY";
