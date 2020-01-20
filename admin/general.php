@@ -101,6 +101,22 @@
 			$objLoad12 ->update("valor");
 		}
 
+        $objLoad13 = new Variable();
+		$objLoad13 ->loadByKey($objLoad13 ->getIdKey(), "27");
+		if (isset($_POST["submit"])) {
+			$objLoad13 ->valor = $_POST["t_twitter"];
+			$objLoad13 ->getConnection();
+			$objLoad13 ->update("valor");
+		}
+
+        $objLoad14 = new Variable();
+		$objLoad14 ->loadByKey($objLoad14->getIdKey(), "28");
+		if (isset($_POST["submit"])) {
+			$objLoad14 ->valor = $_POST["t_whatsapp"];
+			$objLoad14 ->getConnection();
+			$objLoad14 ->update("valor");
+		}
+
 
 	?>
 	<?php include("header.php"); ?>    
@@ -130,16 +146,6 @@
                       <th width="20%" >Teléfonos : </th>
                       <td><input name="t_telefonos_cax" value="<?= $objLoad6 ->valor  ?>" type="text" style="width:98%;"/></td>
                      </tr>
-                    <?php /*?>
-                     <tr>
-                      <th width="20%" >Celulares : </th>
-                      <td><input name="t_celulares_cax" value="<?= $objLoad7 ->valor  ?>" type="text" style="width:98%;"/></td>
-                     </tr>
-                     <tr>
-                      <th width="20%" >Correos : </th>
-                      <td ><input name="t_correos_cax" value="<?= $objLoad5 ->valor  ?>" type="text" style="width:98%;"/></td>
-                     </tr>
-                     <?php */?>
                      <tr>
                       <th width="20%" >Dirección : </th>
                       <td><input name="t_direccion_cax" value="<?= $objLoad8 ->valor  ?>" type="text" style="width:98%;"/></td>
@@ -178,6 +184,14 @@
 				 <tr>
 				  <th width="15%" >Youtube : </th>
 				  <td><input name="t_youtube" value="<?= $objLoad12 ->valor  ?>" type="text" style="width:98%;"/></td>
+				 </tr>
+                 <tr>
+				  <th width="15%" >Twitter : </th>
+				  <td><input name="t_twitter" value="<?= $objLoad13 ->valor  ?>" type="text" style="width:98%;"/></td>
+				 </tr>
+                 <tr>
+				  <th width="15%" >Whatsapp : </th>
+				  <td><input name="t_whatsapp" value="<?= $objLoad14 ->valor  ?>" type="text" style="width:98%;"/></td>
 				 </tr>
             </table>
             <input type="submit" name="submit" value="Guardar" >

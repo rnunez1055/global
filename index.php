@@ -623,6 +623,26 @@
 			</div>
 		</a>
         <?php } ?>
+        
+        <?php if (SITE_TWITTER) { ?>
+        <a href="<?= SITE_TWITTER ?>" target="_blank" title="Twitter">
+			<div>
+				<figure>
+					<i class="fab fa-twitter"></i>
+				</figure>
+			</div>
+		</a>
+        <?php } ?>
+        
+        <?php if (SITE_WHATSAPP) { ?>
+        <a href="<?= SITE_WHATSAPP ?>" target="_blank" title="Whatsapp">
+			<div>
+				<figure>
+<a href="https://api.whatsapp.com/send?phone=<?= SITE_WHATSAPP ?>" target="_blank"><i class="fab fa-whatsapp"></i></a>
+				</figure>
+			</div>
+		</a>
+        <?php } ?>
 	</div>
 </body>
 

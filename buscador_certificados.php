@@ -188,7 +188,7 @@ echo $nueva_fecha_ven;
                         print '<table id="example" class="table table-bordered table" style="width:100%">';
                         print '<thead class="thead-dark table__head">';
                             print '<tr>';
-                                print '<th>PLACA / IDENTIFICACIÓN</th>';
+                                print '<th>Placa / Identificación</th>';
                                 print '<th>Tipo de Equipo</th>';
                                 print '<th>Marca / Modelo</th>';
                                 print '<th>Nro Serie</th>';
