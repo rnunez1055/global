@@ -561,7 +561,7 @@ if (!$objProdPortada->loadByKey($objProdPortada->getIdKey(), intval($page_id_por
 		</div>
 	</div>
 	<?php include("_footer.php") ?>
-	<!-- iconos -->
+	
 	<div class="iconos-fijos">
 		<a class="iconos-fijos__wrap" href="buscador_certificados.php">
 			<figure class="iconos-fijos__icon">
@@ -578,7 +578,7 @@ if (!$objProdPortada->loadByKey($objProdPortada->getIdKey(), intval($page_id_por
 			<p class="iconos-fijos__text">DESCARGAR<br>BROCHURE</p>
 		</a>
 	</div>
-	<!-- redes -->
+	
 	<div class="redes-fijas">
 
 		<?php if (SITE_FACEBOOK) { ?>
