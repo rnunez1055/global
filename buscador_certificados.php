@@ -34,7 +34,7 @@ $_SESSION['q_activo'] = 'alumno';
     <br>
 	<div id="w_contenido" class="ui_page_m">
 		<div class="container">
-			<!--<div class="w_text w_text_big icon_green">
+			<div class="w_text w_text_big icon_green">
 				<p>BUSCADOR DE CERTIFICADOS</p>
 			</div>-->
 			<div class="row row_margin">
@@ -191,9 +191,9 @@ echo $nueva_fecha_ven;
                                 print '<th>Placa / Identificación</th>';
                                 print '<th>Tipo de Equipo</th>';
                                 print '<th>Marca / Modelo</th>';
-                                print '<th>Nro Serie</th>';
+                                print '<th>Nro de<br>Serie</th>';
                                 print '<th>Capacidad</th>';
-                                print '<th>Nro de Certificado</th>';
+                                print '<th>Nro de<br>Certificado</th>';
                                 print '<th>Empresa / Titular</th>';
                                 print '<th>Fecha de Emisión</th>';
                                 print '<th>Fecha de Vencimiento</th>';                                
