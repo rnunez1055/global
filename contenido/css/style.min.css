@@ -1814,3 +1814,8 @@ ul {
         gap: 2rem;
     }
 }
+@media screen and (max-width:800px) {
+  .iconos-fijos{
+      display: none;
+  }
+}
