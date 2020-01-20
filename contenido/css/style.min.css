@@ -1527,7 +1527,7 @@ ul {
 .iconos-fijos-2 {
     position: fixed;
     top: 50%;
-    right: -2rem;
+    right: -0rem;
     z-index: 5;
     background-color: #00C3C5;
     padding: 1rem;
@@ -1818,4 +1818,11 @@ ul {
   .iconos-fijos{
       transform: translateX(16.5rem);
   }
+}
+.slider_t .slick-next{
+    z-index: 10;
+}
+.iconos-fijos__wrap:active,
+.iconos-fijos__wrap:hover{
+    color: #fff;
 }

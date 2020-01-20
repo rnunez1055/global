@@ -1,12 +1,12 @@
 <?php
-	$pPageIsPublic = true;
-	include ('_common.php');
-	$_SESSION['vmnu']='';
-	
-	$page_id_portada = intval(recovery_page(ID_SUBCAT_PORTADA));
+$pPageIsPublic = true;
+include('_common.php');
+$_SESSION['vmnu'] = '';
 
-    $objProdPortada=new Page();
-	if (!$objProdPortada ->loadByKey($objProdPortada ->getIdKey(), intval($page_id_portada))) Tzn::redirect("index.php");
+$page_id_portada = intval(recovery_page(ID_SUBCAT_PORTADA));
+
+$objProdPortada = new Page();
+if (!$objProdPortada->loadByKey($objProdPortada->getIdKey(), intval($page_id_portada))) Tzn::redirect("index.php");
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -16,25 +16,25 @@
 </head>
 
 <body>
-	<?php include("_header.php") ?>    
-    
-    <?php
-        $objFile = new File();	
-           if ( $objFile ->loadItems("#orderId ASC", "#status = '". LBN_ADMIN_STATUS_ON ."' AND LENGTH(#video)=0   AND #pageId=0 AND #".LBN_VAR2."='".LBN_VAR2_BANNER ."'")) {
-               print '<div id="slider">';
-                print '<div class="slider_t slider_mov hidden-xs">';
-                 while ($i = $objFile->rNext()) {
-                     print '<div class="item_mov">';
-                        print '<img src="upload/'.$i ->target.'">';
-                    print '</div>';
-                 }
-                print '</div>';
-               print '</div>';
-           }
-    ?>
-    
-    
-    
+	<?php include("_header.php") ?>
+
+	<?php
+	$objFile = new File();
+	if ($objFile->loadItems("#orderId ASC", "#status = '" . LBN_ADMIN_STATUS_ON . "' AND LENGTH(#video)=0   AND #pageId=0 AND #" . LBN_VAR2 . "='" . LBN_VAR2_BANNER . "'")) {
+		print '<div id="slider">';
+		print '<div class="slider_t slider_mov hidden-xs">';
+		while ($i = $objFile->rNext()) {
+			print '<div class="item_mov">';
+			print '<img src="upload/' . $i->target . '">';
+			print '</div>';
+		}
+		print '</div>';
+		print '</div>';
+	}
+	?>
+
+
+
 	<!--<div id="slider">
 		 <div class="slider_t slider_mov hidden-xs">
 			<div class="item_mov">
@@ -71,22 +71,22 @@
 			</div>
 		</div>
 	</div>-->
-    
+
 
 	<div id="w_contenido">
 		<div id="w_b1">
 			<div class="w_b1_text">
-                
-                <!--<b>Global Supplier S&P S.A.C </b> es una empresa dirigida integramente al ámbito industrial,
+
+				<!--<b>Global Supplier S&P S.A.C </b> es una empresa dirigida integramente al ámbito industrial,
 				tenemos como propósito ser aliados estratégicos en la prevención y seguridad de sus operaciones.-->
-                
-                <?= $objProdPortada ->description?>
-            
-            </div>
+
+				<?= $objProdPortada->description ?>
+
+			</div>
 		</div>
 		<div id="servicios" class="visible-xs visible-sm">
 			<div class="container w_servicios">
-				<a href="page.php?id=<?= ID_PAG_CAPACITACION_PERSONAL?>">
+				<a href="page.php?id=<?= ID_PAG_CAPACITACION_PERSONAL ?>">
 					<div class="w_item_serv">
 						<figure>
 							<img src="contenido/img/botones_moviles/capacitacion_personal_btn_movil.png">
@@ -96,7 +96,7 @@
 						</div>
 					</div>
 				</a>
-				<a href="page.php?id=<?= ID_PAG_INSPECCION_EQUIPOS?>">
+				<a href="page.php?id=<?= ID_PAG_INSPECCION_EQUIPOS ?>">
 					<div class="w_item_serv">
 						<figure>
 							<img src="contenido/img/botones_moviles/inspeccion_equipos_btn_movil.png">
@@ -106,7 +106,7 @@
 						</div>
 					</div>
 				</a>
-				<a href="page.php?id=<?= ID_PAG_MANTENIMIENTO_PREDICTIVO?>">
+				<a href="page.php?id=<?= ID_PAG_MANTENIMIENTO_PREDICTIVO ?>">
 					<div class="w_item_serv">
 						<figure>
 							<img src="contenido/img/botones_moviles/mantenimiento_predictivo_btn_movil.png">
@@ -116,7 +116,7 @@
 						</div>
 					</div>
 				</a>
-				<a href="page.php?id=<?= ID_PAG_ENSAYOS_NO_DESTRUCTIVOS?>">
+				<a href="page.php?id=<?= ID_PAG_ENSAYOS_NO_DESTRUCTIVOS ?>">
 					<div class="w_item_serv">
 						<figure>
 							<img src="contenido/img/botones_moviles/ensayos_no_destructivos_btn_movil.png">
@@ -126,7 +126,7 @@
 						</div>
 					</div>
 				</a>
-				<a href="page.php?id=<?= ID_PAG_HOMOLOGACION_SOLDADORES?>">
+				<a href="page.php?id=<?= ID_PAG_HOMOLOGACION_SOLDADORES ?>">
 					<div class="w_item_serv">
 						<figure>
 							<img src="contenido/img/botones_moviles/homologacion_soldadoresl_btn_movil.png">
@@ -136,7 +136,7 @@
 						</div>
 					</div>
 				</a>
-				<a href="page.php?id=<?= ID_PAG_INSPECCION_MAQUINARIA_ACARREO?>">
+				<a href="page.php?id=<?= ID_PAG_INSPECCION_MAQUINARIA_ACARREO ?>">
 					<div class="w_item_serv">
 						<figure>
 							<img src="contenido/img/botones_moviles/acarreo_mineral_btn_movil.png">
@@ -146,7 +146,7 @@
 						</div>
 					</div>
 				</a>
-				<a href="page.php?id=<?= ID_PAG_ENSAYOS_DESTRUCTIVOS?>">
+				<a href="page.php?id=<?= ID_PAG_ENSAYOS_DESTRUCTIVOS ?>">
 					<div class="w_item_serv">
 						<figure>
 							<img src="contenido/img/botones_moviles/ensayos_destructivos_btn_movil.png">
@@ -171,133 +171,133 @@
 		<div id="w_b2" class="hidden-xs hidden-sm">
 			<div class="container">
 				<div class="btn_servicios btn_capacitacion">
-					<a href="page.php?id=<?= ID_PAG_CAPACITACION_PERSONAL?>" class="circle_link"></a>
-                    
-                    <?php
-                        $objProd=new Page();
-                        if (!$objProd ->loadByKey($objProd ->getIdKey(), intval(ID_PAG_CAPACITACION_PERSONAL))) Tzn::redirect("index.php");
-                    ?>
-                    
+					<a href="page.php?id=<?= ID_PAG_CAPACITACION_PERSONAL ?>" class="circle_link"></a>
+
+					<?php
+					$objProd = new Page();
+					if (!$objProd->loadByKey($objProd->getIdKey(), intval(ID_PAG_CAPACITACION_PERSONAL))) Tzn::redirect("index.php");
+					?>
+
 					<div class="w_btn_servicios">
-						<p class="w_btn_title"><?= $objProd ->title?></p>
-						
-                        <?= $objProd ->description?>
-                        
-						<a href="page.php?id=<?= ID_PAG_CAPACITACION_PERSONAL?>" class="w_btn_link">Leer más</a>
+						<p class="w_btn_title"><?= $objProd->title ?></p>
+
+						<?= $objProd->description ?>
+
+						<a href="page.php?id=<?= ID_PAG_CAPACITACION_PERSONAL ?>" class="w_btn_link">Leer más</a>
 					</div>
 				</div>
 				<div class="btn_servicios btn_inspeccion">
-					<a href="page.php?id=<?= ID_PAG_HOMOLOGACION_SOLDADORES?>" class="circle_link"></a>
-					
-                    <?php
-                        $objProd=new Page();
-                        if (!$objProd ->loadByKey($objProd ->getIdKey(), intval(ID_PAG_HOMOLOGACION_SOLDADORES))) Tzn::redirect("index.php");
-                    ?>
-                    
-                    <div class="w_btn_servicios">
-						<p class="w_btn_title"><?= $objProd ->title?></p>
-						<?= $objProd ->description?>
-						<a href="page.php?id=<?= ID_PAG_HOMOLOGACION_SOLDADORES?>" class="w_btn_link">Leer más</a>
+					<a href="page.php?id=<?= ID_PAG_HOMOLOGACION_SOLDADORES ?>" class="circle_link"></a>
+
+					<?php
+					$objProd = new Page();
+					if (!$objProd->loadByKey($objProd->getIdKey(), intval(ID_PAG_HOMOLOGACION_SOLDADORES))) Tzn::redirect("index.php");
+					?>
+
+					<div class="w_btn_servicios">
+						<p class="w_btn_title"><?= $objProd->title ?></p>
+						<?= $objProd->description ?>
+						<a href="page.php?id=<?= ID_PAG_HOMOLOGACION_SOLDADORES ?>" class="w_btn_link">Leer más</a>
 					</div>
 				</div>
 				<div class="btn_servicios btn_mantenimiento">
-					<a href="page.php?id=<?= ID_PAG_INSPECCION_EQUIPOS?>" class="circle_link"></a>
-                    
-                    <?php
-                        $objProd=new Page();
-                        if (!$objProd ->loadByKey($objProd ->getIdKey(), intval(ID_PAG_INSPECCION_EQUIPOS))) Tzn::redirect("index.php");
-                    ?>
-                    
+					<a href="page.php?id=<?= ID_PAG_INSPECCION_EQUIPOS ?>" class="circle_link"></a>
+
+					<?php
+					$objProd = new Page();
+					if (!$objProd->loadByKey($objProd->getIdKey(), intval(ID_PAG_INSPECCION_EQUIPOS))) Tzn::redirect("index.php");
+					?>
+
 					<div class="w_btn_servicios">
-						<p class="w_btn_title"><?= $objProd ->title?></p>
-						<?= $objProd ->description?>
-						<a href="page.php?id=<?= ID_PAG_INSPECCION_EQUIPOS?>" class="w_btn_link">Leer más</a>
+						<p class="w_btn_title"><?= $objProd->title ?></p>
+						<?= $objProd->description ?>
+						<a href="page.php?id=<?= ID_PAG_INSPECCION_EQUIPOS ?>" class="w_btn_link">Leer más</a>
 					</div>
 				</div>
 				<div class="btn_servicios btn_ensayos_dest">
 					<!--estos son ensayos no destructivos-->
-					<a href="page.php?id=<?= ID_PAG_INSPECCION_MAQUINARIA_ACARREO?>" class="circle_link"></a>
-                    
-                    <?php
-                        $objProd=new Page();
-                        if (!$objProd ->loadByKey($objProd ->getIdKey(), intval(ID_PAG_INSPECCION_MAQUINARIA_ACARREO))) Tzn::redirect("index.php");
-                    ?>
-                    
+					<a href="page.php?id=<?= ID_PAG_INSPECCION_MAQUINARIA_ACARREO ?>" class="circle_link"></a>
+
+					<?php
+					$objProd = new Page();
+					if (!$objProd->loadByKey($objProd->getIdKey(), intval(ID_PAG_INSPECCION_MAQUINARIA_ACARREO))) Tzn::redirect("index.php");
+					?>
+
 					<div class="w_btn_servicios">
-						<p class="w_btn_title"><?= $objProd ->title?></p>
-						<?= $objProd ->description?>
-						<a href="page.php?id=<?= ID_PAG_INSPECCION_MAQUINARIA_ACARREO?>" class="w_btn_link">Leer más</a>
+						<p class="w_btn_title"><?= $objProd->title ?></p>
+						<?= $objProd->description ?>
+						<a href="page.php?id=<?= ID_PAG_INSPECCION_MAQUINARIA_ACARREO ?>" class="w_btn_link">Leer más</a>
 					</div>
 				</div>
 				<div class="btn_servicios btn_homologacion">
-					<a href="page.php?id=<?= ID_PAG_MANTENIMIENTO_PREDICTIVO?>" class="circle_link"></a>
-                    
-                    <?php
-                        $objProd=new Page();
-                        if (!$objProd ->loadByKey($objProd ->getIdKey(), intval(ID_PAG_MANTENIMIENTO_PREDICTIVO))) Tzn::redirect("index.php");
-                    ?>
-                    
+					<a href="page.php?id=<?= ID_PAG_MANTENIMIENTO_PREDICTIVO ?>" class="circle_link"></a>
+
+					<?php
+					$objProd = new Page();
+					if (!$objProd->loadByKey($objProd->getIdKey(), intval(ID_PAG_MANTENIMIENTO_PREDICTIVO))) Tzn::redirect("index.php");
+					?>
+
 					<div class="w_btn_servicios">
-						<p class="w_btn_title"><?= $objProd ->title?></p>
+						<p class="w_btn_title"><?= $objProd->title ?></p>
 						<!--<ul class="w_btn_list">
 							<li>Elaboración de Procedimiento de Soldadura (WPS)</li>
 							<li>Registro de calificación del procedimiento (PQR)</li>
 						</ul>-->
-                        <?= $objProd ->description?>
-						<a href="page.php?id=<?= ID_PAG_MANTENIMIENTO_PREDICTIVO?>" class="w_btn_link">Leer más</a>
+						<?= $objProd->description ?>
+						<a href="page.php?id=<?= ID_PAG_MANTENIMIENTO_PREDICTIVO ?>" class="w_btn_link">Leer más</a>
 					</div>
 				</div>
 				<div class="btn_servicios btn_insp_maq">
-					<a href="page.php?id=<?= ID_PAG_ENSAYOS_DESTRUCTIVOS?>" class="circle_link"></a>
-                    <?php
-                        $objProd=new Page();
-                        if (!$objProd ->loadByKey($objProd ->getIdKey(), intval(ID_PAG_ENSAYOS_DESTRUCTIVOS))) Tzn::redirect("index.php");
-                    ?>
+					<a href="page.php?id=<?= ID_PAG_ENSAYOS_DESTRUCTIVOS ?>" class="circle_link"></a>
+					<?php
+					$objProd = new Page();
+					if (!$objProd->loadByKey($objProd->getIdKey(), intval(ID_PAG_ENSAYOS_DESTRUCTIVOS))) Tzn::redirect("index.php");
+					?>
 					<div class="w_btn_servicios">
-						<p class="w_btn_title"><?= $objProd ->title?></p>
+						<p class="w_btn_title"><?= $objProd->title ?></p>
 						<!--<ul class="w_btn_list">
 							<li>Contamos con un Staff de profesionales con más de 10 años de experiencia en inspección de equipos de acarreo de mineral, en las diferentes minas del Perú.</li>
 						</ul>-->
-                        <?= $objProd ->description?>
-						<a href="page.php?id=<?= ID_PAG_ENSAYOS_DESTRUCTIVOS?>" class="w_btn_link">Leer más</a>
+						<?= $objProd->description ?>
+						<a href="page.php?id=<?= ID_PAG_ENSAYOS_DESTRUCTIVOS ?>" class="w_btn_link">Leer más</a>
 					</div>
 				</div>
 				<div class="btn_servicios btn_ensayos_nodest">
 					<!--este son ensayos destructivos-->
-					<a href="page.php?id=<?= ID_PAG_ENSAYOS_NO_DESTRUCTIVOS?>" class="circle_link"></a>
-                    <?php
-                        $objProd=new Page();
-                        if (!$objProd ->loadByKey($objProd ->getIdKey(), intval(ID_PAG_ENSAYOS_NO_DESTRUCTIVOS))) Tzn::redirect("index.php");
-                    ?>
+					<a href="page.php?id=<?= ID_PAG_ENSAYOS_NO_DESTRUCTIVOS ?>" class="circle_link"></a>
+					<?php
+					$objProd = new Page();
+					if (!$objProd->loadByKey($objProd->getIdKey(), intval(ID_PAG_ENSAYOS_NO_DESTRUCTIVOS))) Tzn::redirect("index.php");
+					?>
 					<div class="w_btn_servicios">
-						<p class="w_btn_title"><?= $objProd ->title?></p>
+						<p class="w_btn_title"><?= $objProd->title ?></p>
 						<!--<ul class="w_btn_list">
 							<li>Prueba de Doblez</li>
 							<li>Prueba de Tracción</li>
 							<li>Metalografía</li>
 							<li>Prueba de dureza Análisis Químico</li>
 						</ul>-->
-                        <?= $objProd ->description?>
-						<a href="page.php?id=<?= ID_PAG_ENSAYOS_NO_DESTRUCTIVOS?>" class="w_btn_link">Leer más</a>
+						<?= $objProd->description ?>
+						<a href="page.php?id=<?= ID_PAG_ENSAYOS_NO_DESTRUCTIVOS ?>" class="w_btn_link">Leer más</a>
 					</div>
 				</div>
 				<div class="btn_servicios btn_venta">
 					<a href="venta_productos.php" class="circle_link"></a>
-					
-                    <?php
-                        $objProd=new Page();
-                        if (!$objProd ->loadByKey($objProd ->getIdKey(), intval(ID_PAG_VENTA_PRODUCTOS))) Tzn::redirect("index.php");
-                    ?>
-                    
-                    <div class="w_btn_servicios">
-						<p class="w_btn_title"><?= $objProd ->title?></p>
+
+					<?php
+					$objProd = new Page();
+					if (!$objProd->loadByKey($objProd->getIdKey(), intval(ID_PAG_VENTA_PRODUCTOS))) Tzn::redirect("index.php");
+					?>
+
+					<div class="w_btn_servicios">
+						<p class="w_btn_title"><?= $objProd->title ?></p>
 						<!--<ul class="w_btn_list">
 							<li>Pinturas Industriales JET</li>
 							<li>Tintes penetrantes marca MAGNAFLUX</li>
 							<li>Partículas magnéticas fluorescentes MAGNAFLUX</li>
 							<li>Partículas magnéticas visibles MAGNAVIS en la marca MAGNAFLUX</li>
 						</ul>-->
-                        <?= $objProd ->description?>
+						<?= $objProd->description ?>
 						<a href="venta_productos.php" class="w_btn_link">Leer más</a>
 					</div>
 				</div>
@@ -312,11 +312,11 @@
 							<div class="title_fondo">IZAJE</div>
 							<div class="w_list_fondo">
 								<div class="row">
-									
-                                    <?= $objProdPortada ->description_en;?>
-                                    
-                                    
-                                    <!--<div class="col-xs-12 col-sm-6 w_50">
+
+									<?= $objProdPortada->description_en; ?>
+
+
+									<!--<div class="col-xs-12 col-sm-6 w_50">
 										<div class="w_list_title">CAPACITACIÓN Y CERTIFICACIÓN DEL PERSONAL</div>
 										<ul>
 											<li>Operadores de Grúas Telescopias</li>
@@ -345,9 +345,9 @@
 												(Grúas, manlift, Montacarga, Telehandler, etc)</li>
 										</ul>
 									</div>-->
-                                    <div class="btn_mas">
-                                        <a href="page.php?id=<?= ID_PAG_CAPACITACION_PERSONAL?>">LEER MAS</a>
-                                    </div>
+									<div class="btn_mas">
+										<a href="page.php?id=<?= ID_PAG_CAPACITACION_PERSONAL ?>">LEER MAS</a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -357,7 +357,7 @@
 							<div class="w_title_border">
 								<p>VENTA DE PRODUCTOS INDUSTRIALES</p>
 							</div>
-                            <?= $objProdPortada ->description_ventasproductos;?>
+							<?= $objProdPortada->description_ventasproductos; ?>
 							<!--<ul class="w_list_det">
 								<li>Pinturas industriales JET</li>
 								<li>Tintes penetrantes marca MAGNAFLUX</li>
@@ -549,15 +549,15 @@
 	<div id="w_b4" class="border_top">
 		<div class="container">
 			<div class="w_text_min">
-                
-                
-                <!--Inspeccionamos mediante ensayos <b>NO DESTRUCTIVOS</b> unidades móviles de transporte de materiales peligrosos <b>(MATPEL)</b>.
+
+
+				<!--Inspeccionamos mediante ensayos <b>NO DESTRUCTIVOS</b> unidades móviles de transporte de materiales peligrosos <b>(MATPEL)</b>.
 				Siendo nuestros principales clientes las empresas que transportan <b>MATPEL</b>
 				a minera <b>YANACOCHA.</b>-->
-            
-            <?= $objProdPortada ->description_ultimo;?>
-            
-            </div>
+
+				<?= $objProdPortada->description_ultimo; ?>
+
+			</div>
 		</div>
 	</div>
 	<?php include("_footer.php") ?>
@@ -575,74 +575,75 @@
 			<figure class="iconos-fijos__icon">
 				<img src="contenido/img/pdf.svg" alt="">
 			</figure>
+			<p class="iconos-fijos__text">DESCARGAR BROCHURE DIGITAL</p>
 		</a>
 	</div>
 	<!-- redes -->
 	<div class="redes-fijas">
 
-        <?php if (SITE_FACEBOOK) { ?>
-        
-		<a href="<?= SITE_FACEBOOK ?>" target="_blank" title="Facebook">
-			<div>
-				<figure>
-					<i class="fab fa-facebook-square"></i>
-				</figure>
-			</div>
-		</a>
-        
-        <?php } ?>
-        
-        <?php if (SITE_INSTAGRAM) { ?>
+		<?php if (SITE_FACEBOOK) { ?>
 
-		<a href="<?= SITE_INSTAGRAM ?>" target="_blank" title="Instagram">
-			<div>
-				<figure>
-					<i class="fab fa-instagram"></i>
-				</figure>
-			</div>
-		</a>
-        
-        <?php } ?>
+			<a href="<?= SITE_FACEBOOK ?>" target="_blank" title="Facebook">
+				<div>
+					<figure>
+						<i class="fab fa-facebook-square"></i>
+					</figure>
+				</div>
+			</a>
+
+		<?php } ?>
+
+		<?php if (SITE_INSTAGRAM) { ?>
+
+			<a href="<?= SITE_INSTAGRAM ?>" target="_blank" title="Instagram">
+				<div>
+					<figure>
+						<i class="fab fa-instagram"></i>
+					</figure>
+				</div>
+			</a>
+
+		<?php } ?>
 
 		<?php if (SITE_YOUTUBE) { ?>
-        <a href="<?= SITE_YOUTUBE ?>" target="_blank" title="Youtube">
-			<div>
-				<figure>
-					<i class="fab fa-youtube"></i>
-				</figure>
-			</div>
-		</a>
-        <?php } ?>
-		
+			<a href="<?= SITE_YOUTUBE ?>" target="_blank" title="Youtube">
+				<div>
+					<figure>
+						<i class="fab fa-youtube"></i>
+					</figure>
+				</div>
+			</a>
+		<?php } ?>
+
 		<?php if (SITE_LINKEDIN) { ?>
-        <a href="<?= SITE_LINKEDIN ?>" target="_blank" title="Linkedin">
-			<div>
-				<figure>
-					<i class="fab fa-linkedin"></i>
-				</figure>
-			</div>
-		</a>
-        <?php } ?>
-        
-        <?php if (SITE_TWITTER) { ?>
-        <a href="<?= SITE_TWITTER ?>" target="_blank" title="Twitter">
-			<div>
-				<figure>
-					<i class="fab fa-twitter"></i>
-				</figure>
-			</div>
-		</a>
-        <?php } ?>
-        
-        <?php if (SITE_WHATSAPP) { ?>
-        <a href="<?= SITE_WHATSAPP ?>" target="_blank" title="Whatsapp">
-			<div>
-				<figure>
-<a href="https://api.whatsapp.com/send?phone=<?= SITE_WHATSAPP ?>" target="_blank"><i class="fab fa-whatsapp"></i></a>
-				</figure>
-			</div>
-		</a>
-        <?php } ?>
+			<a href="<?= SITE_LINKEDIN ?>" target="_blank" title="Linkedin">
+				<div>
+					<figure>
+						<i class="fab fa-linkedin"></i>
+					</figure>
+				</div>
+			</a>
+		<?php } ?>
+
+		<?php if (SITE_TWITTER) { ?>
+			<a href="<?= SITE_TWITTER ?>" target="_blank" title="Twitter">
+				<div>
+					<figure>
+						<i class="fab fa-twitter"></i>
+					</figure>
+				</div>
+			</a>
+		<?php } ?>
+
+		<?php if (SITE_WHATSAPP) { ?>
+			<a href="<?= SITE_WHATSAPP ?>" target="_blank" title="Whatsapp">
+				<div>
+					<figure>
+						<a href="https://api.whatsapp.com/send?phone=<?= SITE_WHATSAPP ?>" target="_blank"><i class="fab fa-whatsapp"></i></a>
+					</figure>
+				</div>
+			</a>
+		<?php } ?>
 	</div>
 </body>
 
