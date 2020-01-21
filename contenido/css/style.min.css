@@ -1527,19 +1527,17 @@ ul {
 .iconos-fijos-2 {
     position: fixed;
     top: 50%;
-    right: -0rem;
-    z-index: 5;
-    background-color: #00C3C5;
-    padding: 1rem;
-    /*transform: translateX(70%);
-    transition: transform .7s;*/
-
-    border-radius: 10px 0px 0px 10px;
-    -moz-border-radius: 10px 0px 0px 10px;
-    -webkit-border-radius: 10px 0px 0px 10px;
-
-    border: 2px #008888 solid;
-    border-right: none;
+    right: 0;
+/* -webkit-box-shadow: -4px 0px 12px -1px rgba(0, 0, 0, 0.75); */
+/* -moz-box-shadow: -4px 0px 12px -1px rgba(0, 0, 0, 0.75); */
+box-shadow: 0px 0px 10px 5px gray;
+}
+.iconos-fijos-2 figure{
+    width: 15rem;
+    margin-right: 0;
+}
+.iconos-fijos-2 figure img{
+    max-width: 100%;
 }
 
 /* .iconos-fijos:hover {
@@ -1823,8 +1821,8 @@ ul {
         transform: translateX(16.5rem);
     }
 
-    .iconos-fijos-2 {
-        transform: translateX(10rem);
+    .iconos-fijos-2 figure {
+       width: 6rem;
     }
 }
 

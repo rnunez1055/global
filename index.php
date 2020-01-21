@@ -561,7 +561,7 @@ if (!$objProdPortada->loadByKey($objProdPortada->getIdKey(), intval($page_id_por
 		</div>
 	</div>
 	<?php include("_footer.php") ?>
-	
+
 	<div class="iconos-fijos">
 		<a class="iconos-fijos__wrap" href="buscador_certificados.php">
 			<figure class="iconos-fijos__icon">
@@ -573,12 +573,12 @@ if (!$objProdPortada->loadByKey($objProdPortada->getIdKey(), intval($page_id_por
 	<div class="iconos-fijos-2">
 		<a class="iconos-fijos__wrap" href="http://globalsuppliersp.com/brochure_izaje/brochure.pdf" target="_blank">
 			<figure class="iconos-fijos__icon">
-				<img src="contenido/img/pdf.svg" alt="">
+				<img src="contenido/img/boton-brochure.png" alt="pdf">
 			</figure>
-			<p class="iconos-fijos__text">DESCARGAR<br>BROCHURE</p>
+			<!-- <p class="iconos-fijos__text">DESCARGAR<br>BROCHURE</p> -->
 		</a>
 	</div>
-	
+
 	<div class="redes-fijas">
 
 		<?php if (SITE_FACEBOOK) { ?>
