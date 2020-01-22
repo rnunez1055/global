@@ -571,7 +571,7 @@ if (!$objProdPortada->loadByKey($objProdPortada->getIdKey(), intval($page_id_por
 		</a>
 	</div>
 	<div class="iconos-fijos-2">
-		<a class="iconos-fijos__wrap" href="http://globalsuppliersp.com/brochure_izaje/brochure.pdf" target="_blank">
+		<a class="iconos-fijos__wrap" href="http://globalsuppliersp.com/brochure_izaje/brochure.pdf" target="_blank" title="Descargar Brochure">
 			<figure class="iconos-fijos__icon">
 				<img src="contenido/img/boton-brochure.png" alt="pdf">
 			</figure>
