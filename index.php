@@ -590,6 +590,7 @@ if (!$objProdPortada->loadByKey($objProdPortada->getIdKey(), intval($page_id_por
 			<figure class="iconos-fijos__icon">
 				<img src="contenido/img/boton-brochure.png" alt="pdf">
 			</figure>
+			<p class="iconos-fijos__text">DESCARGAR<br>BROCHURE</p>
 			<!-- <p class="iconos-fijos__text">DESCARGAR<br>BROCHURE</p> -->
 		</a>
 	</div>
