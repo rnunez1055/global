@@ -6,13 +6,14 @@
 			<div id="logo" class="visible-xs">
 				<a href="index.php"><img src="contenido/img/logo_moviles.png" class="opacity"alt="GLOBAL SUPPLIER SAC"></a>
 			</div>
-			<div id="fb">
+			
                 
-        <?php if (SITE_FACEBOOK) { ?>
+        <?php //if (SITE_FACEBOOK) { ?>
+            <!--<div id="fb">
                 <span>Siguenos en <a href="<?= SITE_FACEBOOK ?>" title="Ir a Facebook : Global Supplier S&P S.A.C" target="_blank"><img src="contenido/img/fb.png" class="opacity"alt="GLOBAL SUPPLIER SAC"></a></span>
-        <?php } ?>
-                
-			</div>
+            </div>-->
+         <?php //} ?>                
+			
 			<div id="menu" class="hidden-xs">
 				<ul class="menu">
 					<li><a href="index.php">PAGINA <br> PRINCIPAL</a></li>

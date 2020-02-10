@@ -23,6 +23,7 @@ if (!$objProdPortada->loadByKey($objProdPortada->getIdKey(), intval($page_id_por
 	if ($objFile->loadItems("#orderId ASC", "#status = '" . LBN_ADMIN_STATUS_ON . "' AND LENGTH(#video)=0   AND #pageId=0 AND #" . LBN_VAR2 . "='" . LBN_VAR2_BANNER . "'")) {
 		print '<div id="slider">';
 		print '<div class="slider_t slider_mov hidden-xs">';
+        //print '<div class="slider_t slider_mov">';
 		while ($i = $objFile->rNext()) {
 			print '<div class="item_mov">';
 			print '<img src="upload/' . $i->target . '">';
@@ -32,8 +33,22 @@ if (!$objProdPortada->loadByKey($objProdPortada->getIdKey(), intval($page_id_por
 		print '</div>';
 	}
 	?>
-
-
+    
+    <?php
+	$objFile = new File();
+	if ($objFile->loadItems("#orderId ASC", "#status = '" . LBN_ADMIN_STATUS_ON . "' AND LENGTH(#video)=0   AND #pageId=0 AND #" . LBN_VAR2 . "='" . LBN_VAR2_BANNER . "'")) {
+		print '<div id="slider">';
+		print '<div class="slider_t slider_mov visible-xs">';
+        //print '<div class="slider_t slider_mov">';
+		while ($i = $objFile->rNext()) {
+			print '<div class="item_mov">';
+			print '<img src="upload/' . $i->target . '">';
+			print '</div>';
+		}
+		print '</div>';
+		print '</div>';
+	}
+	?>
 
 	<!--<div id="slider">
 		 <div class="slider_t slider_mov hidden-xs">
