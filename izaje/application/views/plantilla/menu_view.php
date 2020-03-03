@@ -39,7 +39,15 @@
                                 
                             </ul>
 
-                        </li>       
+                        </li>
+                        <li><a href="<?php echo URL_INICIO ?>maestros/reporte" class="waves-effect"><i class="mdi mdi-content-paste"></i><span>Reportes</span></a></li>
+                        <!-- <li>
+                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-content-paste"></i><span>Reportes <span class="float-right menu-arrow"><i class="mdi mdi-plus"></i></span></span></a>
+                            <ul class="submenu">
+                                <li><a href="<?php //echo URL_INICIO ?>maestros/reporte">Estatus del Certificado</a></li>
+                                <li><a href="<?php //echo URL_INICIO ?>maestros/reporte2">Empresa</a></li>
+                            </ul>
+                        </li> -->
                     </ul>
 
                 </div><!-- Sidebar -->
